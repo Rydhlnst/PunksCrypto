@@ -3,6 +3,10 @@ import { Marquee } from "@/components/ui/marquee";
 import Image from "next/image";
 import FeatureSection from "./_components/FeatureSection";
 import IntroductionSection from "./_components/IntroductionSection";
+import SalesSection from "./_components/SalesSection";
+import RecentTransactionSection from "./_components/RecentTransaction";
+import HowToGetPunkSection from "./_components/HowToGetPunkSection";
+import FAQSection from "./_components/FAQSection";
 
 export default function Home() {
   const nftImages = Array.from({ length: 8 }, (_, i) => `/landing-page/nft/Image (${i + 1}).png`);
@@ -40,6 +44,10 @@ export default function Home() {
       </main>
       <FeatureSection/>
       <IntroductionSection/>
+      <SalesSection/>
+      <RecentTransactionSection/>
+      <HowToGetPunkSection/>
+      <FAQSection/>
     </div>
   );
 }

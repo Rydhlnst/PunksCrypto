@@ -15,79 +15,84 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const SalesSection = () => {
-  const sales = [
+const RecentTransactionSection = () => {
+  const recentTransactions = [
     {
-      id: '#5822',
-      price: 'Ξ 4200 ETH',
-      date: 'Jan 23, 2021',
-      src: '/sales/Frame (1).png',
+      id: "#5822",
+      text: "New bid of Ξ 4200 ETH",
+      date: "Jan 23, 2021",
+      src: "/sales/Frame (1).png",
     },
     {
-      id: '#3100',
-      price: 'Ξ 4200 ETH',
-      date: 'Mar 11, 2021',
-      src: '/sales/Frame (2).png',
+      id: "#3100",
+      text: "New bid of Ξ 3800 ETH",
+      date: "Mar 11, 2021",
+      src: "/sales/Frame (2).png",
     },
     {
-      id: '#7804',
-      price: 'Ξ 4200 ETH',
-      date: 'Mar 11, 2021',
-      src: '/sales/Frame (3).png',
+      id: "#7804",
+      text: "New bid of Ξ 5000 ETH",
+      date: "Mar 15, 2021",
+      src: "/sales/Frame (3).png",
     },
     {
-      id: '#5217',
-      price: 'Ξ 2250 ETH',
-      date: 'Jul 30, 2021',
-      src: '/sales/Frame (4).png',
+      id: "#9421",
+      text: "New bid of Ξ 2100 ETH",
+      date: "Apr 02, 2021",
+      src: "/sales/Frame (4).png",
     },
     {
-      id: '#5217',
-      price: 'Ξ 2250 ETH',
-      date: 'Jul 30, 2021',
-      src: '/sales/Frame (5).png',
+      id: "#1132",
+      text: "New bid of Ξ 2750 ETH",
+      date: "May 19, 2021",
+      src: "/sales/Frame (5).png",
     },
     {
-      id: '#5217',
-      price: 'Ξ 2250 ETH',
-      date: 'Jul 30, 2021',
-      src: '/sales/Frame (6).png',
+      id: "#6750",
+      text: "New bid of Ξ 1950 ETH",
+      date: "Jun 05, 2021",
+      src: "/sales/Frame (6).png",
     },
     {
-      id: '#5217',
-      price: 'Ξ 2250 ETH',
-      date: 'Jul 30, 2021',
-      src: '/sales/Frame (7).png',
+      id: "#8899",
+      text: "New bid of Ξ 3200 ETH",
+      date: "Jul 12, 2021",
+      src: "/sales/Frame (7).png",
     },
     {
-      id: '#5217',
-      price: 'Ξ 2250 ETH',
-      date: 'Jul 30, 2021',
-      src: '/sales/Frame (8).png',
+      id: "#4207",
+      text: "New bid of Ξ 2800 ETH",
+      date: "Aug 01, 2021",
+      src: "/sales/Frame (8).png",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-1/2 w-full text-[#101111] px-8 py-16 bg-white flex flex-col gap-10 items-start justify-center">
       {/* Header */}
-      <div className="flex flex-row w-full justify-between items-center">
-        <h2 className="text-4xl md:text-5xl lg:text-7xl">Largest Sales</h2>
-        <Button
-          asChild
-          className="bg-white rounded-full border border-[#565656] text-[#101111] hover:bg-white/75"
-          size="lg"
-        >
-          <Link href={"/"}>
-            View all
-          </Link>
-        </Button>
+      <div className='w-full flex flex-col gap-5'>
+        <div className="flex flex-row w-full justify-between items-center">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl">Recent Transactions</h2>
+            <Button
+            asChild
+            className="bg-white rounded-full border border-[#565656] text-[#101111] hover:bg-white/75"
+            size="lg"
+            >
+            <Link href={"/"}>
+                View all
+            </Link>
+            </Button>
+        </div>
+        <div>
+            <p>Updated 25 seconds ago</p>
+        </div>
       </div>
 
       {/* Carousel */}
       <div className="pt-12 w-full">
         <Carousel className="w-full mx-auto">
           <CarouselContent>
-            {sales.map((sale, index) => (
+            {recentTransactions.map((sale, index) => (
               <CarouselItem
                 key={index}
                 className="basis-full md:basis-1/4 lg:basis-1/5 xl:basis-1/6"
@@ -104,7 +109,7 @@ const SalesSection = () => {
                   </CardContent>
                   <CardFooter className="flex flex-col items-start justify-start text-sm gap-1 px-2">
                     <p className="font-semibold">{sale.id}</p>
-                    <p className="text-[#565656]">{sale.price}</p>
+                    <p className='text-xs'>{sale.text}</p>
                     <p className="text-xs text-[#8c8c8c]">{sale.date}</p>
                   </CardFooter>
                 </Card>
@@ -123,4 +128,4 @@ const SalesSection = () => {
   )
 }
 
-export default SalesSection
+export default RecentTransactionSection
