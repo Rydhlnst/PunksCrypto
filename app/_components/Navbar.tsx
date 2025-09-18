@@ -6,7 +6,7 @@ import { FaDiscord, FaTwitter  } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 mix-blend-difference backdrop-blur-xs">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#101111]/95 backdrop-blur-md rounded-b-4xl">
         <div className="max-w-7xl mx-auto py-4 pb-6 px-8 flex justify-between items-center">
             <Image src="/landing-page/Icon.svg" width={40} height={30} alt="Icon" />
             <div className="flex items-center flex-row space-x-6 text-white">
