@@ -11,7 +11,7 @@ import FAQSection from "./_components/FAQSection";
 export default function Home() {
   const nftImages = Array.from({ length: 8 }, (_, i) => `/landing-page/nft/Image (${i + 1}).png`);
   return (
-    <div className=" min-h-screen text-white">
+    <div className=" min-h-screen text-white overflow-x-hidden">
       <main className="min-h-screen flex flex-col items-center justify- px-4 relative overflow-hidden bg-[#101111]">
         <div className="h-[80vh] flex items-center justify-center ">
           <div className="text-center flex flex-col gap-4.5 md:gap-6 lg:gap-8 xl:gap-10 items-center justify-center">

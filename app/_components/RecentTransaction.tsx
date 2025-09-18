@@ -89,7 +89,7 @@ const RecentTransactionSection = () => {
       </div>
 
       {/* Carousel */}
-      <div className="pt-12 w-full">
+      <div className="pt-4 md:pt-8 lg:pt-12 w-full">
         <Carousel className="w-full mx-auto">
           <CarouselContent>
             {recentTransactions.map((sale, index) => (
